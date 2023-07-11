@@ -9,7 +9,7 @@ import dotenv from "dotenv";
 const port=process.env.PORT || 8001;
 App.use(cors());
 dbConnection();
-getDataFromApi();
+// getDataFromApi();
 App.use(getAllData);
 App.listen(port,()=>{
     console.log(`Server running at http://localhost:${port}`)
