@@ -16,5 +16,5 @@ longitude :{type : String},
 
     },
 });
-const geoDataModel=mongoose.model("galattwos",geoDataSchema);
+const geoDataModel=mongoose.model("geomap",geoDataSchema);
 export default geoDataModel;
