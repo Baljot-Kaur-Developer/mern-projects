@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import './DataVisualization.css';
 import axios from "axios";
+
 import L from "leaflet";
 import marker from '../resources/images/marker.png';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+
 function DataVisualization() {
     const[ incidents, setIncidents ] = useState([]);
     const  zoom = 10;
@@ -16,7 +18,7 @@ function DataVisualization() {
       
       });
     const getData = async() => {
-        const res1 = await axios.get('http://localhost:8001/getAll');
+        const res1 = await axios.get('http://localhost:5000/getAll');
         // console.log(res1.data.result.objects.output.geometries);
         setIncidents(res1.data.result.objects.output.geometries);
        
